@@ -1,0 +1,61 @@
+@import url("./fonts.scss");
+
+$mainTxtColor: #5C6A79;
+$boldTxtColor: #1C2A39;
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: $mainTxtColor;
+    font-family: Montserrat;
+}
+
+body {
+    background-color: #fff;
+    display: grid;
+    grid-template-columns: minmax(10px, 120px) 1fr minmax(10px, 120px);
+}
+
+.container {
+    max-width: 1120px;
+    grid-column: 2;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 54px 0;
+    &__logo {
+        display: flex;
+        align-items: center;
+        & img {
+            margin: auto;
+        }
+    }
+    &__nav-list {
+        display: flex;
+        flex-direction: row;
+        list-style: none;
+        gap: 40px;
+    }
+    &__nav-link a{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: bold;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+    }
+}
+
+
