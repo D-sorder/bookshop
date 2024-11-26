@@ -17,6 +17,7 @@ body {
     background-color: #fff;
     display: grid;
     grid-template-columns: minmax(10px, 120px) 1fr minmax(10px, 120px);
+    margin-bottom: 15px;
 }
 
 .container {
@@ -50,11 +51,82 @@ body {
         &:hover {
             text-decoration: underline;
         }
+        &.active {
+            font-weight: 900;
+            color: $boldTxtColor;
+        }
     }
     &__buttons {
         display: flex;
         flex-direction: row;
         gap: 40px;
+    }
+}
+
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    &__hero-img {
+        width: 100%;
+        position: relative;
+    }
+    & img {
+        width: 100%;
+    }
+    &__nav {
+        max-width: 40%;
+        margin-top: 17px;
+    }
+    &__dots {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        list-style: none;
+        gap: 10px;
+    }
+    &__dot {
+        border-radius: 100%;
+        background-color: #efeef6;
+        width: 12px;
+        height: 12px;
+        cursor: pointer;
+        &.active {
+            background-color: #9e98dc;
+        }
+    }
+    &__aside-link {
+        padding: 102px 20px 36px;
+        position: absolute;
+        max-width: 155px;
+        &  a {
+            display: inline-block;
+            text-transform: uppercase;
+            font-weight: bold;
+            position: relative;
+            text-decoration: none;
+            color: $boldTxtColor;
+            max-width: 100px;
+            &::after {
+                content: url("../images/svg/arrow.svg");
+                position: absolute;
+                left: 0;
+                bottom: -24px;
+            }
+        }
+        &_purple {
+            background-color: #9e98dc;
+            top: 79px;
+            right: -7%;
+        }
+        &_pink {
+            background-color: #ff8fe6;
+            bottom: 70px;
+            right: -17%;
+            padding: 149px 47px 36px 21px;
+        }
     }
 }
 
