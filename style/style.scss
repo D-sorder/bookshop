@@ -13,24 +13,35 @@ $boldTxtColor: #1C2A39;
     font-family: Montserrat;
 }
 
-body {
+.grid {
     background-color: #fff;
     display: grid;
-    grid-template-columns: minmax(10px, 120px) 1fr minmax(10px, 120px);
+    grid-template-columns: minmax(10px, 200px) 1fr minmax(10px, 200px);
     margin-bottom: 15px;
+    width: 100%;
+    overflow: hidden;
 }
 
 .container {
-    max-width: 1120px;
     grid-column: 2;
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    position: fixed;
+    top: 0;
     width: 100%;
+    z-index: 999;
     padding: 54px 0;
+    background-color: #fff;
+    & .grid {
+        margin-bottom: 0;
+    }
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: 2;
+    }
     &__logo {
         display: flex;
         align-items: center;
@@ -63,6 +74,10 @@ body {
     }
 }
 
+main {
+    margin-top: 131px;
+}
+
 .slider {
     display: flex;
     flex-direction: column;
@@ -72,6 +87,7 @@ body {
     &__hero-img {
         width: 100%;
         position: relative;
+        max-height: 700px;
     }
     & img {
         width: 100%;

@@ -28,12 +28,8 @@ for (let elem of nav) {
     })
 }
 
-
-
 function change (num) {
     currentSlide.src = slides[num];
-    console.log(typeof slides[num]);
-    console.log(currentSlide);
 
     for(let elem of nav) {
         elem.classList.remove("active");
@@ -43,5 +39,19 @@ function change (num) {
     for(let a of activate) {
         a.classList.add("active");
     }
+    console.log('123');
 }
+
+function autoslide () {
+    change(counter);
+    counter++;
+}
+
+window.onload = function() {
+    setInterval(autoslide(),5000);
+    console.log(counter);
+}
+
+
+
 
