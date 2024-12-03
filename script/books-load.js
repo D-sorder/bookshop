@@ -65,9 +65,9 @@ async function load () {
                     star.setAttribute('height', '12');
                     star.classList.add('shop-list__star');
                     if (i < starCount) {
-                        star.setAttribute('src', '../images/svg/StarYellow.svg');
+                        star.setAttribute('src', './images/svg/StarYellow.svg');
                     } else {
-                        star.setAttribute('src', '../images/svg/StarGray.svg');
+                        star.setAttribute('src', './images/svg/StarGray.svg');
                     }
                     stars.appendChild(star);
                 }; 
