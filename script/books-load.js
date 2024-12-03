@@ -67,7 +67,7 @@ async function load () {
                     if (i < starCount) {
                         star.setAttribute('src', '../images/svg/StarYellow.svg');
                     } else {
-                        star.setAttribute('src', '../images/svg/StarGray.svg');
+                        star.setAttribute('src', './images/svg/StarGray.svg');
                     }
                     stars.appendChild(star);
                 }; 
