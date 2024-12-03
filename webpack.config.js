@@ -13,7 +13,7 @@ module.exports = {
       maxAssetSize: 700000
     },
     
-    mode: "development",
+    mode: "production",
     module: {
         rules: [
           {
