@@ -39,18 +39,19 @@ function change (num) {
     for(let a of activate) {
         a.classList.add("active");
     }
-    console.log('123');
 }
 
 function autoslide () {
+    if (counter > slides.length-1) {
+        counter = 0;
+    }
     change(counter);
     counter++;
 }
 
-window.onload = function() {
-    setInterval(autoslide(),5000);
-    console.log(counter);
-}
+setInterval(()=>{
+    autoslide();
+},5000);
 
 
 
